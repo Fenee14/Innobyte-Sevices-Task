@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="../public/style.css">
+</head>
+<style>
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    width: 90%;
+    max-width: 350px;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+h1, h2 {
+    color: blue;
+    
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+input {
+    width: 90%;
+    
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+}
+
+button {
+    width: 50%;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 10px 0;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Media query for medium screens */
+@media (min-width: 768px) {
+    .container {
+        max-width: 300px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .container {
+        max-width: 350px;
+    }
+}
+
+
+</style>
+<body>
+    <div class="container">
+       
+        <!-- Wrap inputs and button inside a form element -->
+        <form action="/login" method="POST">
+            <h1>Login</h1>
+            <!-- Add name attribute to inputs -->
+            <input type="email" name="email" placeholder="Email" required>
+            <input type="password" name="password" placeholder="Password" required>
+            <!-- Specify type as "submit" for button -->
+            <button type="submit">Login</button>
+        </form>
+        <!-- Corrected link to the sign-up route -->
+        <p>Don't have an account?</p><span><a href="/signup">Sign up</a></span>
+    </div>
+</body>
+</html>

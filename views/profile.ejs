@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: thistle;
+        margin: 0;
+        padding: 0;
+    }
+    .container {
+        max-width: 400px;
+        height: fit-content;
+        
+        margin: 50px auto;
+        padding: 20px;
+        background: #ffffff;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        position: relative;
+        box-sizing: border-box;
+    }
+    .profile-header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+    .profile-pic {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        object-fit: cover;
+        margin-bottom: 20px;
+    }
+    .profile-info {
+        text-align: center;
+    }
+    h1, h2 {
+        color:darkblue;
+        margin: 0;
+        font-size: large;
+    }
+    h2 {
+        margin-top: 10px;
+    }
+    .about-yourself {
+        margin-top: 20px;
+        color:black;
+    }
+    form {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        margin-top: 20px;
+    }
+    textarea {
+        width: 60%;
+        margin-bottom: 10px;
+        padding: 10px;
+        border: 1px solid #cccccc;
+        border-radius: 5px;
+        resize: vertical;
+    }
+    .logout-button {
+        padding: 10px 20px;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 0.9em;
+        align-self: flex-end;
+        /* margin-top: -10px; */
+        margin-right: -10px;
+       
+    }
+    .logout-button:hover {
+        background-color: #0056b3;
+    }
+    @media (min-width: 600px) {
+        
+        .profile-header {
+            flex-direction: row;
+            align-items: center;
+        }
+        .profile-pic {
+            margin-right: 20px;
+            margin-bottom: 0;
+        }
+        .profile-info {
+            text-align: left;
+        }
+        form {
+            flex-direction: row;
+            align-items: center;
+            justify-content: flex-end;
+        }
+        .logout-button{
+            align-self: flex-end;
+        }
+    }
+</style>
+<body>
+    <div class="container">
+        <div class="profile-header">
+            <img src="https://static.vecteezy.com/system/resources/previews/005/544/718/non_2x/profile-icon-design-free-vector.jpg"  width="100px" height="40px"   alt="Profile Picture" class="profile-pic">
+            <div class="profile-info">
+                <h1><%= user.username %></h1>
+                <h2><%= user.email %></h2>
+            </div>
+        </div>
+        <div class="about-yourself">
+            <h2>About Yourself</h2>
+            <textarea rows="3"       placeholder="Write something about yourself..."></textarea>
+        </div>
+        <form action="/logout" method="POST">
+            <button type="submit" class="logout-button">Logout</button>
+        </form>
+    </div>
+</body>
+</html>
