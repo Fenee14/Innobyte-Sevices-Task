@@ -22,29 +22,25 @@ This Profile Management Application is a web-based application that allows users
 - MongoDB installed and running
 
 ### Installation
-1. Clone the repository:
+1. Clone the repository
    
-    git clone <repository_url>
-    cd <repository_directory>
-   
-
 2. Install the required dependencies:
     
     npm install
    
 
-4. Start the server:
+3. Start the server:
     
     npm start
  
 
-5. Open your browser and navigate to `http://localhost:3000`.
+4. Open your browser and navigate to `http://localhost:3000`.
 
 ## Usage
 
 ### Registration
 - Navigate to `/signup` to create a new account.
-- Fill in the registration form with a username, email, and password.- Check your email for the confirmation link and confirm your email address.
+- Fill in the registration form with a username, email, and password.- Check your email for the confirmation of signup
 
 ### Login
 - Navigate to `/login` and log in with your email and password.
